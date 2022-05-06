@@ -52,13 +52,13 @@ if [ ! $PORT ]; then
     PORT='9001'
 fi
 
-DOWNLOAD_URL="https://github.com/minima-global/Minima/raw/master/jar/minima.jar"
-MINIMA_JAR_NAME="minima.jar"
+# DOWNLOAD_URL="https://github.com/minima-global/Minima/raw/master/jar/minima.jar"
+# MINIMA_JAR_NAME="minima.jar"
 
-echo "[+] Downloading minima from: $DOWNLOAD_URL"
-wget -q -O $HOME"/"$MINIMA_JAR_NAME $DOWNLOAD_URL
-chown minima:minima $HOME"/"$MINIMA_JAR_NAME
-chmod +x $HOME"/"$MINIMA_JAR_NAME
+#echo "[+] Downloading minima from: $DOWNLOAD_URL"
+#wget -q -O $HOME"/"$MINIMA_JAR_NAME $DOWNLOAD_URL
+#chown minima:minima $HOME"/"$MINIMA_JAR_NAME
+#chmod +x $HOME"/"$MINIMA_JAR_NAME
 
 if [ ! -d "$HOME/.minima_$PORT" ]; then
   echo "[+] Creating data directory .minima_${PORT}..."
