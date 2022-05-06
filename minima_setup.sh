@@ -29,8 +29,8 @@ while getopts ':xsc::p:r:d:h:' flag; do
   esac
 done
 
-apt update
-apt install openjdk-11-jre-headless curl jq -y
+# apt update
+# apt install openjdk-11-jre-headless curl jq -y
 
 if [ ! $(getent group minima) ]; then
   echo "[+] Adding minima group"
@@ -44,9 +44,9 @@ if ! id -u 9001 > /dev/null 2>&1; then
     chown minima:minima $HOME
 fi
 
-wget -q -O $HOME"/minima_service.sh" "https://github.com/minima-global/Minima/raw/master/scripts/minima_service.sh"
-chown minima:minima $HOME"/minima_service.sh"
-chmod +x $HOME"/minima_service.sh"
+# wget -q -O $HOME"/minima_service.sh" "https://github.com/minima-global/Minima/raw/master/scripts/minima_service.sh"
+# chown minima:minima $HOME"/minima_service.sh"
+# chmod +x $HOME"/minima_service.sh"
 
 CMD="$HOME/minima_service.sh -s $@"
 CRONSTRING="#!/bin/sh
